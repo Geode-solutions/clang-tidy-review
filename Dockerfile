@@ -3,7 +3,8 @@ FROM ubuntu:22.04
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends\
-    build-essential cmake wget git \
+    build-essential cmake git \
+    lsb-release wget software-properties-common gnupg \
     tzdata \
     python3 \
     python3-pip \
