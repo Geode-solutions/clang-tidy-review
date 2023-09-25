@@ -1,16 +1,14 @@
 FROM ubuntu:22.04
 
+RUN wget https://apt.llvm.org/llvm.sh && \
+    chmod +x llvm.sh && \
+    ./llvm.sh 17
+
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends\
     build-essential cmake git \
     tzdata \
-    clang-tidy-11 \
-    clang-tidy-12 \
-    clang-tidy-13 \
-    clang-tidy-14 \
-    clang-tidy-15 \
-    clang-tidy-16 \
     python3 \
     python3-pip \
     && rm -rf /var/lib/apt/lists/
