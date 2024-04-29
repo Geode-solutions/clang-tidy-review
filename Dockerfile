@@ -12,8 +12,8 @@ RUN apt update && \
 
 RUN wget https://apt.llvm.org/llvm.sh && \
     chmod +x llvm.sh && \
-    ./llvm.sh 17 && \
-    apt-get install -y clang-tidy-17
+    ./llvm.sh 18 && \
+    apt-get install -y clang-tidy-18
 
 COPY . /clang_tidy_review/
 
